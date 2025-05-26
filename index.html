@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblock Your Path: A Speed Coaching Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Assuming Inter is a good default, or Tailwind's default sans-serif */
+        }
+        .hero-bg {
+            background-color: #FFF7ED; /* Warm cream/beige */
+        }
+        .accent-color {
+            color: #DAA520; /* Earthy Goldenrod for primary accents */
+        }
+        .accent-bg {
+            background-color: #DAA520;
+        }
+        .secondary-accent-color {
+            color: #6A8EAE; /* Warm Muted Blue-Gray for secondary accents */
+        }
+        .secondary-accent-bg {
+            background-color: #6A8EAE;
+        }
+        .text-dark-gray {
+            color: #424242; /* Dark gray for text */
+        }
+        .bg-light-gray {
+            background-color: #F5F5F5; /* Light gray for alternating sections */
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        /* Accordion styles */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-button.active + .accordion-content {
+            max-height: 500px; /* Adjust as needed */
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #DAA520; /* Primary accent color on hover */
+        }
+        .cta-button {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .cta-button:hover {
+            background-color: #C08E1A; /* Darker Goldenrod on hover */
+            transform: translateY(-2px);
+        }
+        .highlight-header-box {
+            background-color: #DAA520; /* Earthy Goldenrod */
+            color: white;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.375rem; /* rounded-md */
+            display: inline-block;
+            margin-bottom: 0.25rem; /* mb-1 */
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="text-dark-gray smooth-scroll">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold secondary-accent-color" style="font-family: 'Playfair Display', serif;">Speed Coaching</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#overview" class="nav-link">Overview</a>
+                <a href="#benefits" class="nav-link">Benefits</a>
+                <a href="#coaches" class="nav-link">Coaches</a>
+                <a href="#next-steps" class="nav-link">Next Steps</a>
+                <a href="#join" class="nav-link">Join Us</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-dark-gray focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white py-2">
+            <a href="#overview" class="block px-6 py-2 text-sm nav-link mobile-nav-link">Overview</a>
+            <a href="#benefits" class="block px-6 py-2 text-sm nav-link mobile-nav-link">Benefits</a>
+            <a href="#coaches" class="block px-6 py-2 text-sm nav-link mobile-nav-link">Coaches</a>
+            <a href="#next-steps" class="block px-6 py-2 text-sm nav-link mobile-nav-link">Next Steps</a>
+            <a href="#join" class="block px-6 py-2 text-sm nav-link mobile-nav-link">Join Us</a>
+        </div>
+    </nav>
+
+    <header class="hero-bg py-16 md:py-24">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold secondary-accent-color mb-4" style="font-family: 'Playfair Display', serif;">Unblock Your Path</h1>
+            <p class="text-xl md:text-2xl text-dark-gray mb-8">Experience the transformative power of speed coaching.</p>
+            <div class="text-lg text-dark-gray mb-8 text-left inline-block">
+                <p class="mb-2"><strong>Format:</strong> Virtual Event</p>
+                <p class="mb-2"><strong>When:</strong> Tuesday, June 11; 12 to 1pm PT / 3 to 4pm ET</p>
+                <p><strong>Suggested Donation:</strong> $20 to $30</p>
+            </div>
+            <a href="#overview" class="cta-button accent-bg text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-[#C08E1A] block mx-auto w-fit">
+                Explore the Event
+            </a>
+        </div>
+    </header>
+
+    <section id="overview" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 secondary-accent-color" style="font-family: 'Playfair Display', serif;">Discover Speed Coaching & Your Event Experience</h2>
+            <p class="text-lg text-center text-dark-gray max-w-3xl mx-auto mb-12">
+                This event is your gateway to understanding coaching. We aim to demystify what coaching conversations are, allow you to experience its benefits first-hand, and spark inspiration for your personal and professional growth. It's more than an event; it's an experience designed to enlighten and empower.
+            </p>
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="space-y-6 w-full md:text-left mx-auto max-w-3xl">
+                    <h3 class="text-2xl font-semibold accent-color mb-3">Event Highlights:</h3>
+                    <ul class="list-none space-y-3 text-dark-gray">
+                        <li class="flex items-start flex-col sm:flex-row sm:items-center"><div class="highlight-header-box">Audience</div> <span class="ml-0 sm:ml-2">Up to 30 individuals keen on personal/professional development and curious about coaching.</span></li>
+                        <li class="flex items-start flex-col sm:flex-row sm:items-center"><div class="highlight-header-box">Live VC Demos</div> <span class="ml-0 sm:ml-2">See live coaching conversations with 3 participants, demonstrating the power of making a shift within just 10-minutes with coaching support.</span></li>
+                        <li class="flex items-start flex-col sm:flex-row sm:items-center"><div class="highlight-header-box">Explore What Matters to You</div> <span class="ml-0 sm:ml-2">Explore a topic you've been avoiding or may benefit from some safe space to process.</span></li>
+                        <li class="flex items-start flex-col sm:flex-row sm:items-center"><div class="highlight-header-box">Attendance</div> <span class="ml-0 sm:ml-2">Secured with a suggested donation of $20 to $30, confirming your commitment to participate.</span></li>
+                        <li class="flex items-start flex-col sm:flex-row sm:items-center"><div class="highlight-header-box">Connection</div> <span class="ml-0 sm:ml-2">Connect with others who are facing similar challenges.</span></li>
+                    </ul>
+                    <img src="https://placehold.co/600x400/FFF7ED/6A8EAE?text=Growth+Journey" alt="Illustration of a growth journey" class="rounded-lg shadow-xl mx-auto mt-6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="py-16 bg-light-gray">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 secondary-accent-color" style="font-family: 'Playfair Display', serif;">Why You Should Attend</h2>
+            <p class="text-lg text-center text-dark-gray max-w-3xl mx-auto mb-12">
+                Participating in this Speed Coaching event offers tangible benefits that can catalyze your growth. You'll not just learn about coaching; you'll live it, feel its impact, and leave with actionable insights.
+            </p>
+            <div class="space-y-4 max-w-2xl mx-auto">
+                <div class="accordion-item bg-white p-6 rounded-lg shadow-lg">
+                    <button class="accordion-button w-full text-left text-xl font-semibold accent-color flex justify-between items-center">
+                        <span>Experience Coaching First-Hand</span>
+                        <span class="arrow-icon transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content mt-2 text-dark-gray">
+                        <p>Move beyond theory. Engage in real coaching conversations and directly understand how this powerful tool can help unlock your potential and navigate challenges in your life.</p>
+                    </div>
+                </div>
+                <div class="accordion-item bg-white p-6 rounded-lg shadow-lg">
+                    <button class="accordion-button w-full text-left text-xl font-semibold accent-color flex justify-between items-center">
+                        <span>Gain Clarity on Coaching</span>
+                        <span class="arrow-icon transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content mt-2 text-dark-gray">
+                        <p>Demystify what coaching truly is (and isn't!). Understand the nature of coaching conversations, their focus on forward movement, and how they differ from therapy or mentoring.</p>
+                    </div>
+                </div>
+                <div class="accordion-item bg-white p-6 rounded-lg shadow-lg">
+                    <button class="accordion-button w-full text-left text-xl font-semibold accent-color flex justify-between items-center">
+                        <span>Spark Inspiration for Growth</span>
+                        <span class="arrow-icon transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content mt-2 text-dark-gray">
+                        <p>Leave with a renewed sense of purpose and a spark to reflect on areas you wish to grow into. Identify actionable steps to begin your journey of development immediately.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="coaches" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 secondary-accent-color" style="font-family: 'Playfair Display', serif;">Meet Your Guides</h2>
+            <p class="text-lg text-center text-dark-gray max-w-3xl mx-auto mb-12">
+                Our event is led by passionate and experienced coaches dedicated to your growth. Get to know the individuals who will be facilitating this transformative experience.
+            </p>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-xl text-center border-t-4 border-[#DAA520]">
+                    <img src="images/connie-headshot.jpg" alt="Headshot of Coach Connie" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white shadow-md">
+                    <h3 class="text-2xl font-semibold accent-color mb-2">Connie</h3>
+                    <p class="text-dark-gray mb-4"><em>"My goal is to be of service and support, helping you see what's possible. I love creating fun, collaborative events that plant seeds for future growth."</em></p>
+                    <p class="text-sm text-gray-600 mb-4">Focus: Service & Support, Marketing for Impact, Collaborative Fun.</p>
+                    <div class="bg-light-gray p-4 rounded-md text-sm text-dark-gray italic">
+                        "Connie helped me clarify my goals and take actionable steps. Highly recommend!" - Client Testimonial
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-xl text-center border-t-4 border-[#6A8EAE]">
+                    <img src="images/tracy-headshot.jpg" alt="Headshot of Coach Tracy" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white shadow-md">
+                    <h3 class="text-2xl font-semibold secondary-accent-color mb-2">Tracy</h3>
+                    <p class="text-dark-gray mb-4"><em>"I'm passionate about teaching what coaching truly is, demonstrating its power, and showing how it differs from therapy. It's all about exposure to new possibilities!"</em></p>
+                    <p class="text-sm text-gray-600 mb-4">Focus: Demystifying Coaching, Live Demonstrations, Exposure to Coaching Benefits.</p>
+                    <div class="bg-light-gray p-4 rounded-md text-sm text-dark-gray italic">
+                        "Tracy's insights were invaluable. I left with a clear plan and renewed confidence." - Client Outcome
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="next-steps" class="py-16 bg-light-gray">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 secondary-accent-color" style="font-family: 'Playfair Display', serif;">Continue Your Growth Journey</h2>
+            <p class="text-lg text-center text-dark-gray max-w-3xl mx-auto mb-12">
+                The Speed Coaching event is just the beginning. We encourage you to take the insights and inspiration gained and apply them to your life. Here are some ways to continue your journey:
+            </p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="accordion-item bg-white p-6 rounded-lg shadow-lg">
+                    <button class="accordion-button w-full text-left text-xl font-semibold accent-color flex justify-between items-center">
+                        <span>Sign Up for a Sample Session</span>
+                        <span class="arrow-icon transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content mt-2 text-dark-gray">
+                        <p>Deepen your exploration with a complimentary sample coaching session with one of our coaches. A great way to discuss your specific goals.</p>
+                    </div>
+                </div>
+                <div class="accordion-item bg-white p-6 rounded-lg shadow-lg">
+                    <button class="accordion-button w-full text-left text-xl font-semibold accent-color flex justify-between items-center">
+                        <span>Share Your Experience</span>
+                        <span class="arrow-icon transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content mt-2 text-dark-gray">
+                        <p>Spread the word! Share what you learned and experienced with 2-3 other people. Sharing reinforces your learning and might inspire others.</p>
+                    </div>
+                </div>
+                <div class="accordion-item bg-white p-6 rounded-lg shadow-lg">
+                    <button class="accordion-button w-full text-left text-xl font-semibold accent-color flex justify-between items-center">
+                        <span>Find an Accountability Buddy</span>
+                        <span class="arrow-icon transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content mt-2 text-dark-gray">
+                        <p>Connect with a fellow participant to become accountability buddies. Set a timeline to check in on your progress and support each other.</p>
+                    </div>
+                </div>
+                <div class="accordion-item bg-white p-6 rounded-lg shadow-lg">
+                    <button class="accordion-button w-full text-left text-xl font-semibold accent-color flex justify-between items-center">
+                        <span>Commit to Monday's Action</span>
+                        <span class="arrow-icon transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="accordion-content mt-2 text-dark-gray">
+                        <p>What one thing will you do differently on Monday as a result of this event? Define it, commit to it, and tell 2-3 people to solidify your intention.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="py-16 hero-bg">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 secondary-accent-color" style="font-family: 'Playfair Display', serif;">Ready to Unblock Your Path?</h2>
+            <p class="text-xl text-dark-gray mb-8 max-w-2xl mx-auto">
+                Join Connie and Tracy for an unforgettable Speed Coaching experience. It's time to invest in yourself and discover what's possible.
+            </p>
+            <div class="mb-8">
+                <p class="text-lg text-dark-gray"><strong>Event:</strong> Unblock Your Path: A Speed Coaching Experience</p>
+                <p class="text-lg text-dark-gray"><strong>When:</strong> Tuesday, June 11; 12 to 1pm PT / 3 to 4pm ET</p>
+                <p class="text-lg text-dark-gray"><strong>Format:</strong> Virtual (VC)</p>
+                <p class="text-lg text-dark-gray"><strong>Suggested Donation:</strong> $20 to $30 (to secure your place)</p>
+            </div>
+            <button class="cta-button accent-bg text-white font-bold py-4 px-10 rounded-lg shadow-xl hover:bg-[#C08E1A] text-xl">
+                Claim your spot - Register Here!
+            </button>
+            <p class="mt-6 text-dark-gray">Questions?, please contact <a href="mailto:breakthroughwconnie@gmail.com" class="secondary-accent-color hover:underline">breakthroughwconnie@gmail.com</a></p>
+        </div>
+    </section>
+
+    <footer class="bg-dark-gray text-white py-8 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; <span id="currentYear"></span> Speed Coaching Event by Connie & Tracy. All Rights Reserved.</p>
+            <p class="text-sm">Designed to Inspire & Empower.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const arrow = button.querySelector('.arrow-icon');
+                
+                button.classList.toggle('active');
+                if (button.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    arrow.style.transform = 'rotate(180deg)';
+                } else {
+                    content.style.maxHeight = null;
+                    arrow.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = document.querySelector('nav').offsetHeight || 70;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+        
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
